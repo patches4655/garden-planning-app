@@ -1,0 +1,35 @@
+== Fruits ==
+tomato tiny tim
+tomato red cherry
+tomato beefsteak
+watermellon
+
+== Veggies ==
+bell pepper
+carrot
+cowpea
+cucumber
+fennel
+jalapeno pepper
+okra
+snap sugar daddy pea
+string bean
+
+== Herbs ==
+bergamont
+dill
+english lavender
+oregano
+pepermint
+purple basil
+rosemary
+sage
+thyme
+
+== Flowers ==
+cosmos
+linaria
+marigold
+morning glory
+shasta daisy
+zinna - california giants

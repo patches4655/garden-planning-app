@@ -1,0 +1,48 @@
+== Fruits ==
+
+Plant                | Spacing              | Soil                                      | Sun                                  | Water                                                        | Trellis
+---------------------|----------------------|-------------------------------------------|--------------------------------------|--------------------------------------------------------------|--------
+Tomato Tiny Tim      | 45-60cm (18-24in)    | Rich, free-draining, moisture-retentive   | Full sun, warm, sheltered            | Regular, keep evenly moist                                   | No (dwarf variety)
+Tomato Red Cherry    | 45-60cm (18-24in)    | Rich, free-draining, moisture-retentive   | Full sun, warm, sheltered            | Regular, keep evenly moist                                   | Yes
+Tomato Beefsteak     | 45-60cm (18-24in)    | Rich, free-draining, moisture-retentive   | Full sun, warm, sheltered            | Regular, keep evenly moist                                   | Yes
+Watermelon           | 3-5 feet             | Nutrient-rich, well-drained, pH 6.0-6.8   | Full sun, soil temps above 70F       | Consistent moisture, not waterlogged, water in morning       | No (spread on ground)
+
+== Veggies ==
+
+Plant                | Spacing              | Soil                                      | Sun                                  | Water                                                        | Trellis
+---------------------|----------------------|-------------------------------------------|--------------------------------------|--------------------------------------------------------------|--------
+Bell Pepper          | 18-24 inches         | Well-drained, pH 6.2-7.0, add compost     | Full sun, 6-8 hours daily            | 1-2 inches per week, keep moist                              | Optional (stakes help with heavy fruit)
+Carrot               | 3-4 inches           | Loamy, loose, neutral pH                  | Full sun, tolerates partial shade    | 1-2 inches per week                                          | No
+Cowpea               | 3-4 inches           | Clay, loam, or sandy, pH 5.5-6.5          | Full sun, 6+ hours daily             | Moderate, avoid waterlogging                                 | Yes (climbing vine)
+Cucumber             | 36-60in (12in if trellised) | Warm, fertile, pH 6.0-6.8          | Full sun, abundant                   | 1 inch per week, keep consistently moist                     | Yes (recommended)
+Fennel (Florence)    | 8-12 inches          | Humus-rich, well-drained, pH 5.5-7.0      | Full sun, 6+ hours, cool season      | Keep consistently moist, never let dry out, mulch well       | No
+Jalapeno Pepper      | 18-24 inches         | Well-draining, add compost                | Full sun                             | Let soil dry between watering, water at base                 | Optional (stakes help)
+Okra                 | 10 inches            | Neutral pH 6.5-7.0, add compost           | Full sun (sunniest spot)             | 1 inch per week, drought tolerant                            | No (grows upright like tree)
+Snap Pea             | 3 inches apart       | Well-drained, add compost/manure          | Full sun, warm sheltered             | Minimal, increase when flowering                             | Yes (netting or sticks)
+String Bean          | 6 inches (15cm)      | Well-drained, add compost/manure          | Full sun, warm                       | Regular, especially when flowering                           | Yes for climbing, optional for dwarf
+
+== Herbs ==
+
+Plant                | Spacing              | Soil                                      | Sun                                  | Water                                                        | Trellis
+---------------------|----------------------|-------------------------------------------|--------------------------------------|--------------------------------------------------------------|--------
+Bergamot             | 18-24 inches         | Fertile, well-drained, pH 6.0-6.7         | Full sun, afternoon shade in South   | Water when top inch dry, tolerates dry spells                | No
+Dill                 | 8 inches (20cm)      | Fertile, free-draining                    | Full sun, warm sheltered             | Regular in dry spells, prevent bolting                       | No (can grow tall)
+English Lavender     | 12-18 inches         | Poor to moderate, free-draining, alkaline | Full sun                             | Drought tolerant once established                            | No
+Fennel               | 12 inches (30cm)     | Light, free-draining                      | Full sun, warm sheltered             | Drought tolerant, water when young                           | Optional (cane in windy spots)
+Oregano              | 8-12 inches          | Well-drained, poor to moderate            | Full sun, warm                       | Drought tolerant, minimal watering                           | No
+Peppermint           | Container (spreads)  | Any soil type, multipurpose compost       | Full sun to partial shade            | Regular, especially in containers                            | No
+Purple Basil         | 4 inches (10cm)      | Free-draining                             | Full sun, warm sheltered             | Keep evenly moist, water in morning                          | No
+Rosemary             | 18 inches (45cm)     | Light, free-draining, tolerates poor soil | Full sun                             | Drought tolerant, water when newly planted                   | No
+Sage                 | 12 inches (30cm)     | Free-draining, tolerates poor soil        | Full sun, warm sheltered             | Drought tolerant, avoid overwatering                         | No
+Thyme                | 8-12 inches          | Light, well-drained                       | Full sun, warm                       | Drought tolerant, rarely needs water                         | No
+
+== Flowers ==
+
+Plant                | Spacing              | Soil                                      | Sun                                  | Water                                                        | Trellis
+---------------------|----------------------|-------------------------------------------|--------------------------------------|--------------------------------------------------------------|--------
+Cosmos               | 12-36 inches         | Clay, loam, sandy, tolerates poor soil    | Full sun, 6+ hours                   | Drought tolerant, occasional watering                        | Optional (stake tall varieties in wind)
+Linaria              | 6-12 inches          | Well-drained, humusy to sandy-loam        | Full sun, partial shade OK           | Keep consistently moist, good drainage                       | No
+Marigold             | 6-12 inches          | Average, well-drained                     | Full sun to partial shade            | Drought tolerant once established                            | No
+Morning Glory        | 6-12 inches          | Well-drained, poor to sandy, any pH       | Full sun, 6+ hours                   | Tolerates dry and wet conditions                             | Yes (climbing vine, needs support)
+Shasta Daisy         | 12-36 inches         | Clay, loam, sand, neutral pH              | Full sun, 6+ hours                   | Tolerates occasional dry conditions                          | No
+Zinnia               | 8-12 inches          | Loam, high organic matter, good drainage  | Full sun, 6+ hours                   | Drought tolerant                                             | No
