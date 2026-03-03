@@ -71,7 +71,7 @@ Please provide your response as JSON with this exact structure:
 
 IMPORTANT RULES:
 - Create exactly 2 to 4 plant groups (beds). Combine plants into fewer, well-planned beds.
-- Mix flowers directly into other groups as companions. Do NOT create a flowers-only group unless the user selected ONLY flowers.
+- Every bed must include at least one herb and at least one flower as companions (for pest control, pollination, and beauty). Do NOT create herb-only or flower-only groups.
 - The "category" field for each plant must be one of: "fruits", "veggies", "herbs", "flowers". Use the category from the seed list above — e.g., fennel is a veggie, not an herb.
 - Only use bed types from the available bed types listed above.
 - Beds must fit within the {preferences.yard_width}ft x {preferences.yard_depth}ft yard.

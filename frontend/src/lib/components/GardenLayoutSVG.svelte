@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PlantGroup, Category } from '$lib/types';
+	import { getPlantPixels, GRID_SIZE } from '$lib/pixelArt';
 
 	interface Props {
 		groups: PlantGroup[];
@@ -10,8 +11,8 @@
 	const CATEGORY_COLORS: Record<Category, string> = {
 		fruits: '#e63946',
 		veggies: '#2a9d8f',
-		herbs: '#8338ec',
-		flowers: '#fb8500'
+		herbs: '#fb8500',
+		flowers: '#e91e63'
 	};
 
 	const CATEGORY_LABELS: Record<Category, string> = {
@@ -67,7 +68,7 @@
 		return t.includes('metal') && widthFt === heightFt && widthFt <= 2;
 	}
 
-	const MIN_CELL = 55;
+	const MIN_CELL = 58;
 
 	function bedLayout(group: PlantGroup) {
 		const { widthFt, heightFt } = parseSizeFt(group.container.size);
@@ -177,6 +178,9 @@
 			{#each bed.group.plants as plant, pi}
 				{@const cx = startX + pi * (containerR * 2 + gap)}
 				{@const cy = bed.y + bed.layout.height / 2}
+				{@const pixels = getPlantPixels(plant.name)}
+				{@const pxSize = 4}
+				{@const iconSize = GRID_SIZE * pxSize}
 				<!-- Container circle -->
 				<circle
 					{cx}
@@ -188,34 +192,25 @@
 					stroke-width={style.strokeWidth}
 					stroke-dasharray={style.dash}
 				/>
-				<!-- Plant circle inside -->
+				<!-- Pixel art plant -->
 				<g>
 					<title>{plant.name} ({plant.category})</title>
-					<circle
-						{cx}
-						cy={cy - 6}
-						r="18"
+					{#each pixels as px}
+						<rect
+							x={cx - iconSize / 2 + px.x * pxSize}
+							y={cy - iconSize / 2 - 4 + px.y * pxSize}
+							width={pxSize}
+							height={pxSize}
+							fill={px.color}
+						/>
+					{/each}
+					<text
+						x={cx}
+						y={cy + iconSize / 2 + 8}
+						text-anchor="middle"
 						fill={CATEGORY_COLORS[plant.category]}
-						fill-opacity="0.9"
-						stroke="white"
-						stroke-width="2"
-					/>
-					<text
-						x={cx}
-						y={cy - 2}
-						text-anchor="middle"
-						fill="white"
-						font-size="7"
-						font-weight="600"
-					>
-						{truncate(plant.name, 9)}
-					</text>
-					<text
-						x={cx}
-						y={cy + 20}
-						text-anchor="middle"
-						fill="#333"
 						font-size="8"
+						font-weight="600"
 					>
 						{truncate(plant.name, 12)}
 					</text>
@@ -250,40 +245,33 @@
 			{/if}
 
 			<!-- Plants inside shared bed -->
-			{@const plantR = Math.min(20, (bed.layout.cellW - 8) / 2, (bed.layout.cellH - 20) / 2)}
+			{@const pxSize = Math.min(4, (bed.layout.cellW - 12) / GRID_SIZE, (bed.layout.cellH - 18) / GRID_SIZE)}
 			{#each bed.group.plants as plant, pi}
 				{@const col = pi % bed.layout.cols}
 				{@const row = Math.floor(pi / bed.layout.cols)}
 				{@const cx = bed.x + BED_PAD + col * bed.layout.cellW + bed.layout.cellW / 2}
-				{@const cy = bed.y + BED_PAD + row * bed.layout.cellH + bed.layout.cellH / 2 - 6}
+				{@const cy = bed.y + BED_PAD + row * bed.layout.cellH + bed.layout.cellH / 2 - 4}
+				{@const pixels = getPlantPixels(plant.name)}
+				{@const iconSize = GRID_SIZE * pxSize}
 
 				<g>
 					<title>{plant.name} ({plant.category})</title>
-					<circle
-						{cx}
-						{cy}
-						r={plantR}
+					{#each pixels as px}
+						<rect
+							x={cx - iconSize / 2 + px.x * pxSize}
+							y={cy - iconSize / 2 + px.y * pxSize}
+							width={pxSize}
+							height={pxSize}
+							fill={px.color}
+						/>
+					{/each}
+					<text
+						x={cx}
+						y={cy + iconSize / 2 + 10}
+						text-anchor="middle"
 						fill={CATEGORY_COLORS[plant.category]}
-						fill-opacity="0.9"
-						stroke="white"
-						stroke-width="2"
-					/>
-					<text
-						x={cx}
-						y={cy + 4}
-						text-anchor="middle"
-						fill="white"
-						font-size={Math.min(8, plantR * 0.45)}
-						font-weight="600"
-					>
-						{truncate(plant.name, 9)}
-					</text>
-					<text
-						x={cx}
-						y={cy + plantR + 12}
-						text-anchor="middle"
-						fill="#333"
 						font-size="8"
+						font-weight="600"
 					>
 						{truncate(plant.name, 12)}
 					</text>
