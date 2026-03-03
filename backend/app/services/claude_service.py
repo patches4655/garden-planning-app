@@ -77,7 +77,8 @@ IMPORTANT RULES:
 - Beds must fit within the {preferences.yard_width}ft x {preferences.yard_depth}ft yard.
 - Group all selected plants into appropriate beds. Ensure every selected plant appears in exactly one group.
 - Only include plants from the selected seeds in the bloom_schedule.
-- Metal Raised Beds come in ONLY these sizes: "2ft x 2ft" (circular), "4ft x 2ft", or "6ft x 3ft". Do not invent other sizes for metal beds."""
+- Metal Raised Beds come in ONLY these sizes: "2ft x 2ft" (circular), "4ft x 2ft", or "6ft x 3ft". Do not invent other sizes for metal beds.
+- Fennel and peppermint are invasive spreaders — they MUST each be placed in their own individual Half Barrel, never in a shared raised bed with other plants."""
 
 
 async def generate_garden_plan(

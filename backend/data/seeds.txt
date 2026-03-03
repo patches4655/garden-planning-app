@@ -3,6 +3,7 @@ tomato tiny tim
 tomato red cherry
 tomato beefsteak
 watermelon
+Strawberries
 
 == Veggies ==
 bell pepper
@@ -14,6 +15,9 @@ jalapeno pepper
 okra
 snap sugar daddy pea
 string bean
+Celery
+Spinach
+Kale
 
 == Herbs ==
 bergamont
@@ -33,3 +37,4 @@ marigold
 morning glory
 shasta daisy
 zinna - california giants
+
