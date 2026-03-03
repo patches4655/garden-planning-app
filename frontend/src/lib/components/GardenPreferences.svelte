@@ -2,8 +2,13 @@
 	import { gardenPreferences } from '$lib/stores/gardenPreferences';
 
 	const BED_OPTIONS = [
+		{ value: 'Yard/Grass Plot', label: 'Yard/Grass Plot' },
 		{ value: 'Wood Raised Bed', label: 'Wood Raised Bed' },
-		{ value: 'Metal Raised Bed', label: 'Metal Raised Bed' }
+		{ value: 'Metal Raised Bed', label: 'Metal Raised Bed' },
+		{ value: 'Stone/Brick Raised Bed', label: 'Stone/Brick Raised Bed' },
+		{ value: 'Terra Cotta Pots', label: 'Terra Cotta Pots' },
+		{ value: 'Plastic Pots', label: 'Plastic Pots' },
+		{ value: 'Half Barrels', label: 'Half Barrels' }
 	];
 
 	const SUN_OPTIONS = ['full sun', 'partial sun', 'partial shade'];

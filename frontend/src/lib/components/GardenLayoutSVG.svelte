@@ -27,8 +27,19 @@
 	const YARD_PAD = 30;
 	const LABEL_HEIGHT = 40;
 
-	function isWoodBed(type: string): boolean {
-		return type.toLowerCase().includes('wood');
+	function bedStyle(type: string): { stroke: string; strokeWidth: number; dash: string; fill: string } {
+		const t = type.toLowerCase();
+		if (t.includes('yard') || t.includes('grass')) return { stroke: '#66bb6a', strokeWidth: 2, dash: '8 4', fill: '#a5d6a7' };
+		if (t.includes('wood')) return { stroke: '#8B6914', strokeWidth: 3, dash: 'none', fill: '#d4a574' };
+		if (t.includes('metal')) return { stroke: '#78909c', strokeWidth: 2, dash: '6 3', fill: '#b0bec5' };
+		if (t.includes('stone') || t.includes('brick')) return { stroke: '#8d6e63', strokeWidth: 3, dash: 'none', fill: '#bcaaa4' };
+		if (t.includes('fabric')) return { stroke: '#66bb6a', strokeWidth: 2, dash: '4 4', fill: '#a5d6a7' };
+		if (t.includes('grow bag')) return { stroke: '#4a4a4a', strokeWidth: 2, dash: '3 3', fill: '#9e9e9e' };
+		if (t.includes('self-water')) return { stroke: '#1e88e5', strokeWidth: 2, dash: 'none', fill: '#90caf9' };
+		if (t.includes('terra cotta')) return { stroke: '#bf360c', strokeWidth: 2, dash: 'none', fill: '#e6a07c' };
+		if (t.includes('plastic')) return { stroke: '#7cb342', strokeWidth: 2, dash: 'none', fill: '#c5e1a5' };
+		if (t.includes('barrel')) return { stroke: '#5d4037', strokeWidth: 3, dash: 'none', fill: '#a1887f' };
+		return { stroke: '#78909c', strokeWidth: 2, dash: '6 3', fill: '#d4a574' };
 	}
 
 	function parseSizeFt(size: string): { widthFt: number; heightFt: number } {
@@ -117,7 +128,7 @@
 	/>
 
 	{#each layout.beds as bed}
-		{@const isWood = isWoodBed(bed.group.container.type)}
+		{@const style = bedStyle(bed.group.container.type)}
 
 		<!-- Bed shape -->
 		<rect
@@ -126,11 +137,11 @@
 			width={bed.layout.width}
 			height={bed.layout.height}
 			rx="6"
-			fill="#d4a574"
+			fill={style.fill}
 			fill-opacity="0.35"
-			stroke={isWood ? '#8B6914' : '#78909c'}
-			stroke-width={isWood ? 3 : 2}
-			stroke-dasharray={isWood ? 'none' : '6 3'}
+			stroke={style.stroke}
+			stroke-width={style.strokeWidth}
+			stroke-dasharray={style.dash}
 		/>
 
 		<!-- Plants inside bed -->
