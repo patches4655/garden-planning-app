@@ -2,6 +2,9 @@
 
 A companion planting web app that helps you plan an aesthetically pleasing garden. Select your seeds, set your garden preferences, and get AI-powered recommendations for plant groupings, containers, and layout.
 
+![Plan Page](docs/screenshot.png)
+
+
 ## Tech Stack
 
 - **Frontend:** SvelteKit + TypeScript
