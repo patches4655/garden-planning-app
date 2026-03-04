@@ -351,7 +351,6 @@
 	.garden-layout {
 		width: 100%;
 		height: auto;
-		max-height: 550px;
 		border-radius: 12px;
 	}
 </style>

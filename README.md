@@ -2,7 +2,7 @@
 
 A companion planting web app that helps you plan an aesthetically pleasing garden. Select your seeds, set your garden preferences, and get AI-powered recommendations for plant groupings, containers, and layout.
 
-![Plan Page](docs/screenshot.png)
+![Plan Page](docs/plan.png)
 
 
 ## Tech Stack
@@ -24,9 +24,15 @@ garden-planning-app/
 └── boxes.txt          # Container types and recommendations
 ```
 
-## Getting Started
+## Local Development
 
-### Backend
+### Prerequisites
+
+- Python 3.10+
+- Node.js 18+
+- An [Anthropic API key](https://console.anthropic.com/)
+
+### 1. Backend
 
 ```bash
 cd backend
@@ -35,27 +41,42 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Create a `.env` file in `backend/` with your API key:
+Create a `.env` file in `backend/`:
 
 ```
 ANTHROPIC_API_KEY=your-api-key-here
 ```
 
-Run the server:
+Start the server:
 
 ```bash
-uvicorn app.main:app --reload --port 8000
+uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
-API docs available at [localhost:8000/docs](http://localhost:8000/docs).
+The API will be running at [localhost:8000](http://localhost:8000). Interactive docs at [localhost:8000/docs](http://localhost:8000/docs).
 
-### Frontend
+### 2. Frontend
+
+In a separate terminal:
 
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
+
+The app will be running at [localhost:5173](http://localhost:5173).
+
+### Running both together
+
+You need both servers running at the same time. Open two terminals:
+
+| Terminal | Command | URL |
+|---|---|---|
+| 1 (Backend) | `cd backend && venv/Scripts/activate && uvicorn app.main:app --host 0.0.0.0 --port 8000` | localhost:8000 |
+| 2 (Frontend) | `cd frontend && npm run dev` | localhost:5173 |
+
+> **Note:** On macOS/Linux, use `source venv/bin/activate` instead of `venv\Scripts\activate`.
 
 ## API
 
@@ -79,6 +100,7 @@ Detailed implementation plans live in the [docs/](docs/) folder:
 - [Backend Plan](docs/BACKEND-PLAN.md) — FastAPI architecture, endpoints, Claude prompt strategy, and data models
 - [Frontend Plan](docs/FRONTEND-PLAN.md) — SvelteKit components, stores, pages, and UI flow
 - [Sidebar Plan](docs/SIDEBAR-PLAN.md) — Saved gardens sidebar design
+- [Bed Layout Plan](docs/BED-LAYOUT-PLAN.md) — Plant quantities and perimeter flower placement
 
 ## Testing
 
@@ -88,4 +110,5 @@ Detailed implementation plans live in the [docs/](docs/) folder:
 
 ## Future features
 
- - make images look like stardew valley
+ - make images look like stardew valley ( done)
+ - make a hover over each garden bed and show the water needs
